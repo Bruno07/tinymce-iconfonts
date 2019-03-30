@@ -1,4 +1,4 @@
-// global: tinymce
+/* globals tinymce */
 //
 // This plugin prevents icon fonts from being removed in TinyMCE. It also makes them selectable so
 // you can easily copy/paste/delete them.

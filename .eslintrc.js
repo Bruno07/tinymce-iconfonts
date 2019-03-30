@@ -12,9 +12,6 @@ module.exports = {
     es6: true,
     node: true
   },
-  globals: {
-    tinymce: false
-  },
   rules: {
     'arrow-parens': ['warn', 'as-needed'],
     'comma-dangle': ['warn'],
