@@ -1,0 +1,39 @@
+{
+  "name": "tinymce-iconfonts",
+  "version": "1.0.0",
+  "description": "The holy grail of using icon fonts in TinyMCE.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claviska/tinymce-iconfonts.git"
+  },
+  "keywords": [
+    "tinymce",
+    "plugin",
+    "icon",
+    "fonts"
+  ],
+  "author": "Cory LaViska",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/claviska/tinymce-iconfonts/issues"
+  },
+  "homepage": "https://github.com/claviska/tinymce-iconfonts#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-terser": "^1.1.7"
+  }
+}

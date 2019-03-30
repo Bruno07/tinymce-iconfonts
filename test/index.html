@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>iconfonts plugin for TinyMCE</title>
+  <style>
+    body {
+      font-family: system-ui;
+      padding: 2rem;
+    }
+
+    div {
+      border: solid 2px #e8e8e8;
+      border-radius: 4px;
+      margin: 5rem 0 1rem 0;
+      padding: 0 1rem;
+      transition: .2s border;
+    }
+
+    div:focus {
+      border-color: #08d;
+      outline: none;
+    }
+
+    button {
+      border: solid 1px #08d;
+      border-radius: 4px;
+      background: #08d;
+      font: inherit;
+      color: white;
+      padding: .5rem 1rem;
+    }
+
+    i.fas,
+    i.fab {
+      font-size: 2rem;
+      margin-right: .5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>TinyMCE iconfonts</h1>
+    <p>Note: due to the way TinyMCE loads external plugins, this file must be run from a local web server.</p>
+    <p>
+      <i class="fas fa-trophy"></i>
+      <i class="fas fa-check"></i>
+      <i class="fas fa-user"></i>
+      <i class="fas fa-flag"></i>
+      <i class="fab fa-github"></i>
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus architecto explicabo ex aliquid eius, labore non ducimus mollitia repudiandae ratione rem. Nihil numquam harum amet ipsam fugit, illum ad eaque.</p>
+  </div>
+
+  <button id="get">Log Content</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.0.3/tinymce.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      tinymce.init({
+        selector: 'div',
+        inline: true,
+        external_plugins: {
+          iconfonts: `${location.protocol}//${location.host}/dist/plugin.js`
+        },
+        init_instance_callback: function(editor) {
+          editor.undoManager.clear();
+
+          document.querySelector('#get').addEventListener('click', function() {
+            console.log(editor.getContent());
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
