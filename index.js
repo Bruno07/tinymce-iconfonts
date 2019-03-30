@@ -5,4 +5,4 @@
 //
 //  ES6: import 'tinymce-iconfonts'
 //
-require('./src/plugin.js');
+require('./dist/plugin.js');
