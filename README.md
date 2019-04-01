@@ -5,13 +5,11 @@ The holy grail of using icon fonts in TinyMCE. 🏆
 This plugin does a few things:
 
 1. Prevents TinyMCE from converting `<i>` icons into `<em>` elements
-2. Prevents TinyMCE from removing empty font icons
-3. Makes font icons selectable so you can copy/paste/delete them easier
-4. Let's you configure the CSS selector used to identify font icons
+2. Prevents TinyMCE from removing empty icons
+3. Makes icons selectable so you can copy/paste/delete them easier
+4. Let's you configure the CSS selector used to identify icon font elements
 
-You can configure the plugin to target certain CSS selectors using the `iconfonts_selector` init property.
-
-NOTE: This plugin __does not__ provide a UI, and choosing different icons from a UI is outside the scope of this plugin.
+NOTE: This plugin is designed to allow icon font elements to exist in the TinyMCE editor. It It does not facilitate inserting or changing icons through a UI. Such features are outside the scope of this plugin.
 
 ## Standard Usage
 
@@ -35,7 +33,13 @@ tinymce.init({
 
 ## Advanced Usage
 
-If you're using a module loader (e.g. for a custom TinyMCE build), include the plugin using:
+If you're using a module loader (e.g. for a custom TinyMCE build), install with:
+
+```sh
+npm install tinymce-iconfonts
+```
+
+Then include the plugin with:
 
 ```js
 // CommonJS
